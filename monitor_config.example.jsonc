@@ -1,0 +1,49 @@
+{
+  // Intervalo, em segundos, entre cada ciclo de monitoramento.
+  // Valores muito baixos aumentam o volume de scans e consultas locais.
+  "scan_interval_seconds": 5,
+
+  // Lista de redes que serao monitoradas.
+  // Use "auto" para detectar automaticamente as sub-redes IPv4 da maquina.
+  // Tambem e possivel combinar "auto" com redes explicitamente informadas.
+  "scan_networks": [
+    "auto",
+    "192.168.0.0/24",
+    "192.168.1.0/24"
+  ],
+
+  // Equipamentos de infraestrutura que o app deve destacar no relatorio.
+  // Em geral, aqui entram modem, roteador, repetidor, access point ou switch gerenciavel.
+  "infrastructure_devices": [
+    {
+      // Nome amigavel exibido na interface.
+      "name": "Modem",
+
+      // IP esperado do equipamento.
+      // Se o IP responder ao scan ARP da rede correspondente, o equipamento aparecera como online.
+      "ip": "192.168.0.1"
+    },
+    {
+      "name": "Repetidor",
+      "ip": "192.168.0.2"
+    }
+  ],
+
+  // Dominios que o app tentara bloquear localmente no Windows.
+  // O bloqueio e feito resolvendo o dominio para IPs e criando regras de saida no Firewall.
+  // Isso nao substitui filtro DNS ou proxy corporativo.
+  "restricted_domains": [
+    "facebook.com",
+    "tiktok.com"
+  ],
+
+  // IPs remotos bloqueados diretamente no Firewall local.
+  "restricted_ips": [
+    "8.8.8.8",
+    "1.1.1.1"
+  ],
+
+  // Numero maximo de conexoes mostradas na interface.
+  // O log CSV pode registrar novas conexoes mesmo quando a tela mostra apenas uma amostra.
+  "connection_display_limit": 20
+}

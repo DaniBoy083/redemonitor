@@ -1,0 +1,26 @@
+{
+  "scan_interval_seconds": 4,
+  "device_scan_interval_seconds": 20,
+  "config_check_interval_seconds": 5,
+  "scan_networks": [
+    "auto",
+    "192.168.0.0/24",
+    "192.168.1.0/24",
+    "10.0.0.0/24"
+  ],
+  "infrastructure_devices": [
+    {
+      "name": "Modem",
+      "ip": "192.168.1.1"
+    },
+    {
+      "name": "Repetidor",
+      "ip": "192.168.1.2"
+    }
+  ],
+  "restricted_domains": [],
+  "restricted_ips": [],
+  "connection_display_limit": 12,
+  "enable_reverse_dns": false,
+  "reverse_dns_ttl_seconds": 600
+}
