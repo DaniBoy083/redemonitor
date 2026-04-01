@@ -20,7 +20,7 @@ A interface agora possui quatro visoes e controles rapidos:
 - `Perfil Normal`, `Perfil Leve`, `Perfil Economia`: troca de preset com um clique na aba Config
 - `Abrir Log`: abre `access_log.csv` no programa padrao do sistema
 - `Exportar Relatorio`: gera snapshot completo em TXT e CSV
-- `Rodape`: assinatura padronizada com versao, autor, ano e atalhos para GitHub/Outros Projetos
+- `Rodape`: assinatura padronizada com versao, autor, ano e atalhos para GitHub/Saiba mais
 
 O projeto nao substitui firewall corporativo, proxy, filtro DNS centralizado, NAC ou SIEM. Ele funciona como ferramenta local de observacao e controle no host onde esta sendo executado.
 

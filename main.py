@@ -57,8 +57,9 @@ REPORTS_DIR = BASE_DIR / "reports"
 APP_RULE_PREFIX = "DeteccaoRede"
 APP_NAME = "MonitorRede"
 APP_VERSION = "2.1.0"
-APP_AUTHOR = "thefu"
-APP_GITHUB_URL = "https://github.com/thefu"
+APP_AUTHOR = "Daniel Costa"
+APP_GITHUB_URL = "https://github.com/DaniBoy083?tab=overview&from=2026-02-01&to=2026-02-28"
+APP_MORE_INFO_URL = "https://devthreebydanielcosta.vercel.app"
 
 
 # Configuracao padrao. Ela e usada tanto como fallback quando o JSON estiver
@@ -1017,7 +1018,7 @@ class MonitorApp(BoxLayout):
         )
         self.github_button.bind(on_release=lambda *_args: self.open_project_github())
         self.repos_button = Button(
-            text="Outros Projetos",
+            text="Saiba mais",
             size_hint=(None, 1),
             width=122,
         )
@@ -1219,13 +1220,12 @@ class MonitorApp(BoxLayout):
             self.status_label.text = f"Falha ao abrir GitHub: {error}"
 
     def open_other_projects(self):
-        """Abre a pagina de repositorios do perfil no navegador padrao."""
-        repos_url = APP_GITHUB_URL.rstrip("/") + "?tab=repositories"
+        """Abre pagina adicional de referencia no navegador padrao."""
         try:
-            webbrowser.open(repos_url, new=2)
-            self.status_label.text = "Lista de projetos aberta no navegador"
+            webbrowser.open(APP_MORE_INFO_URL, new=2)
+            self.status_label.text = "Pagina Saiba mais aberta no navegador"
         except Exception as error:
-            self.status_label.text = f"Falha ao abrir lista de projetos: {error}"
+            self.status_label.text = f"Falha ao abrir pagina Saiba mais: {error}"
 
     def set_view(self, view_name):
         """Alterna entre monitoramento, ajuda e editor de configuracao."""
